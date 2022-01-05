@@ -1,6 +1,4 @@
 #include "mainwindow.h"
-#include "addlayer.h"
-#include "addmaterial.h"
 #include "calculation.h"
 #include "ui_mainwindow.h"
 
@@ -15,8 +13,6 @@ MainWindow::MainWindow(QWidget *parent)
 MainWindow::~MainWindow()
 {
     delete ui;
-    delete addMaterial;
-    delete addLayer;
     delete calculation;
 }
 
@@ -32,16 +28,39 @@ void MainWindow::on_removeLayer_clicked()
 
 void MainWindow::on_addLayerButton_clicked()
 {
-    addLayer = new AddLayer(this);
-    addLayer->show();
+    ui->layersTable->insertRow(ui->layersTable->rowCount());
+
 }
 
+/*
+//void MainWindow::on_addMaterialButton_clicked()
+//{
+//    addMaterial = new AddMaterial(this);
+    addMaterial->exec();
 
-void MainWindow::on_addMaterialButton_clicked()
-{
-    addMaterial = new AddMaterial(this);
-    addMaterial->show();
+    // when Material window is closed
+    if (addMaterial->Accepted) {
+        QString epsS = QString::number(addMaterial->getEpsilon());
+        QString muS = QString::number(addMaterial->getMu());
+        QString nameS = addMaterial->getName();
+
+
+        ui->MaterialsTable->insertRow(ui->MaterialsTable->rowCount());
+
+        QTableWidgetItem *nameItem = new QTableWidgetItem (nameS);
+        QTableWidgetItem *epsItem = new QTableWidgetItem (epsS);
+        QTableWidgetItem *muItem = new QTableWidgetItem (muS);
+
+        ui->MaterialsTable->setItem(ui->MaterialsTable->rowCount()-1,0, nameItem);
+        ui->MaterialsTable->setItem(ui->MaterialsTable->rowCount()-1,1,epsItem);
+        ui->MaterialsTable->setItem(ui->MaterialsTable->rowCount()-1,2,muItem);
+
+
+
+
+    }
 }
+*/
 
 
 void MainWindow::on_calculateButton_clicked()
@@ -49,4 +68,7 @@ void MainWindow::on_calculateButton_clicked()
     calculation = new Calculation(this);
     calculation->show();
 }
+
+
+
 

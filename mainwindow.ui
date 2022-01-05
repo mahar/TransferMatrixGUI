@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>TransferMatrixGUI</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="gridLayoutWidget">
@@ -20,11 +20,31 @@
       <x>100</x>
       <y>60</y>
       <width>591</width>
-      <height>71</height>
+      <height>74</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
-     <item row="0" column="5">
+     <item row="2" column="4">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Number of Frequencies</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="4">
+      <widget class="QDoubleSpinBox" name="FreqEnd">
+       <property name="maximum">
+        <double>99999999.989999994635582</double>
+       </property>
+       <property name="singleStep">
+        <double>0.010000000000000</double>
+       </property>
+       <property name="stepType">
+        <enum>QAbstractSpinBox::DefaultStepType</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="5">
       <widget class="QComboBox" name="Units">
        <item>
         <property name="text">
@@ -48,64 +68,14 @@
        </item>
       </widget>
      </item>
-     <item row="0" column="6">
-      <widget class="QSpinBox" name="FreqsNumber">
-       <property name="maximum">
-        <number>9999</number>
-       </property>
-       <property name="value">
-        <number>1</number>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="3">
-      <widget class="QDoubleSpinBox" name="FreqStart">
-       <property name="decimals">
-        <number>2</number>
-       </property>
-       <property name="maximum">
-        <double>99999.990000000005239</double>
-       </property>
-       <property name="singleStep">
-        <double>0.100000000000000</double>
-       </property>
-      </widget>
-     </item>
      <item row="1" column="1">
-      <widget class="QLabel" name="AngleLabel">
-       <property name="text">
-        <string>Angle of Incidence</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="4">
-      <widget class="QDoubleSpinBox" name="FreqEnd">
-       <property name="maximum">
-        <double>99999999.989999994635582</double>
-       </property>
-       <property name="singleStep">
-        <double>0.010000000000000</double>
-       </property>
-       <property name="stepType">
-        <enum>QAbstractSpinBox::DefaultStepType</enum>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="3">
-      <widget class="Line" name="line">
-       <property name="orientation">
-        <enum>Qt::Vertical</enum>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
       <widget class="QLabel" name="FreqLabel">
        <property name="text">
         <string>Frequency Range :</string>
        </property>
       </widget>
      </item>
-     <item row="1" column="3">
+     <item row="2" column="3">
       <widget class="QDoubleSpinBox" name="Angle">
        <property name="decimals">
         <number>2</number>
@@ -118,68 +88,71 @@
        </property>
       </widget>
      </item>
+     <item row="2" column="1">
+      <widget class="QLabel" name="AngleLabel">
+       <property name="text">
+        <string>Angle of Incidence</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="5">
+      <widget class="QSpinBox" name="FreqsNumber">
+       <property name="maximum">
+        <number>9999</number>
+       </property>
+       <property name="value">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="QDoubleSpinBox" name="FreqStart">
+       <property name="decimals">
+        <number>2</number>
+       </property>
+       <property name="maximum">
+        <double>99999.990000000005239</double>
+       </property>
+       <property name="singleStep">
+        <double>0.100000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>From:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="4">
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>To:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="5">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Units</string>
+       </property>
+      </widget>
+     </item>
     </layout>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>590</x>
-      <y>20</y>
-      <width>141</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Number of Frequencies</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>500</x>
-      <y>20</y>
-      <width>49</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Units</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_3">
-    <property name="geometry">
-     <rect>
-      <x>270</x>
-      <y>20</y>
-      <width>49</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>From:</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_4">
-    <property name="geometry">
-     <rect>
-      <x>390</x>
-      <y>20</y>
-      <width>49</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>To:</string>
-    </property>
    </widget>
    <widget class="QPushButton" name="calculateButton">
     <property name="geometry">
      <rect>
-      <x>340</x>
+      <x>280</x>
       <y>360</y>
-      <width>111</width>
-      <height>51</height>
+      <width>161</width>
+      <height>81</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: rgb(170, 170, 255);
+font: 900 12pt &quot;Segoe UI&quot;;</string>
     </property>
     <property name="text">
      <string>Calculate</string>
@@ -188,12 +161,17 @@
    <widget class="QTableWidget" name="layersTable">
     <property name="geometry">
      <rect>
-      <x>50</x>
+      <x>80</x>
       <y>150</y>
-      <width>341</width>
-      <height>131</height>
+      <width>611</width>
+      <height>161</height>
      </rect>
     </property>
+    <row>
+     <property name="text">
+      <string>1</string>
+     </property>
+    </row>
     <column>
      <property name="text">
       <string>Layer Name</string>
@@ -206,15 +184,60 @@
     </column>
     <column>
      <property name="text">
-      <string>Material</string>
+      <string>Epsilon real</string>
      </property>
     </column>
+    <column>
+     <property name="text">
+      <string>Epsilon imag</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Mu real</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Mu imag</string>
+     </property>
+    </column>
+    <item row="0" column="0">
+     <property name="text">
+      <string>VacuumLayer</string>
+     </property>
+    </item>
+    <item row="0" column="1">
+     <property name="text">
+      <string>0</string>
+     </property>
+    </item>
+    <item row="0" column="2">
+     <property name="text">
+      <string>1</string>
+     </property>
+    </item>
+    <item row="0" column="3">
+     <property name="text">
+      <string>0</string>
+     </property>
+    </item>
+    <item row="0" column="4">
+     <property name="text">
+      <string>1</string>
+     </property>
+    </item>
+    <item row="0" column="5">
+     <property name="text">
+      <string>0</string>
+     </property>
+    </item>
    </widget>
    <widget class="QToolButton" name="addLayerButton">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>290</y>
+      <x>120</x>
+      <y>320</y>
       <width>81</width>
       <height>22</height>
      </rect>
@@ -226,8 +249,8 @@
    <widget class="QToolButton" name="removeLayer">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>290</y>
+      <x>590</x>
+      <y>320</y>
       <width>81</width>
       <height>22</height>
      </rect>
@@ -239,8 +262,8 @@
    <widget class="QToolButton" name="toolButton_3">
     <property name="geometry">
      <rect>
-      <x>310</x>
-      <y>290</y>
+      <x>440</x>
+      <y>320</y>
       <width>81</width>
       <height>22</height>
      </rect>
@@ -252,8 +275,8 @@
    <widget class="QToolButton" name="toolButton_4">
     <property name="geometry">
      <rect>
-      <x>220</x>
-      <y>290</y>
+      <x>270</x>
+      <y>320</y>
       <width>81</width>
       <height>22</height>
      </rect>
@@ -262,76 +285,33 @@
      <string>Move Up</string>
     </property>
    </widget>
-   <widget class="QToolButton" name="addMaterialButton">
+   <widget class="QLabel" name="label_5">
     <property name="geometry">
      <rect>
-      <x>450</x>
-      <y>280</y>
-      <width>81</width>
-      <height>22</height>
+      <x>550</x>
+      <y>530</y>
+      <width>241</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="text">
-     <string>Add Dielectric</string>
+     <string>Developed by Charalampos Mavidis | 2022</string>
     </property>
    </widget>
-   <widget class="QToolButton" name="removeMaterialButton">
+   <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>320</y>
-      <width>101</width>
-      <height>22</height>
+      <x>80</x>
+      <y>0</y>
+      <width>671</width>
+      <height>51</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 900 22pt &quot;Segoe UI Black&quot;;</string>
     </property>
     <property name="text">
-     <string>Remove Material</string>
-    </property>
-   </widget>
-   <widget class="QTableWidget" name="MaterialsTable">
-    <property name="geometry">
-     <rect>
-      <x>460</x>
-      <y>150</y>
-      <width>301</width>
-      <height>121</height>
-     </rect>
-    </property>
-    <column>
-     <property name="text">
-      <string>Material Name</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>Permittivity Model</string>
-     </property>
-    </column>
-   </widget>
-   <widget class="QToolButton" name="addDrudeButton">
-    <property name="geometry">
-     <rect>
-      <x>540</x>
-      <y>280</y>
-      <width>121</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Add Drude Material</string>
-    </property>
-   </widget>
-   <widget class="QToolButton" name="addLorentzButton">
-    <property name="geometry">
-     <rect>
-      <x>660</x>
-      <y>280</y>
-      <width>121</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Add Lorentz Material</string>
+     <string>TransferMatrix for Planar Layered Structures</string>
     </property>
    </widget>
   </widget>

@@ -9,21 +9,15 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    addlayer.cpp \
-    addmaterial.cpp \
     calculation.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
-    addlayer.h \
-    addmaterial.h \
     calculation.h \
     mainwindow.h
 
 FORMS += \
-    addlayer.ui \
-    addmaterial.ui \
     calculation.ui \
     mainwindow.ui
 
