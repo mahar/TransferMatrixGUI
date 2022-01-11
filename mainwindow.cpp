@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "calculation.h"
+#include "tmm.h"
 #include "ui_mainwindow.h"
 
 
@@ -65,8 +66,28 @@ void MainWindow::on_addLayerButton_clicked()
 
 void MainWindow::on_calculateButton_clicked()
 {
-    calculation = new Calculation(this);
-    calculation->show();
+    //calculation = new Calculation(this);
+    //calculation->show();
+
+    // Step 1: Frequency range and angle of incidence
+
+    /* Step 2: Gather the layer and material list
+     * and convert them into the appropriate data structures.
+     */
+    std::vector<Layer> structure = {};
+    double freqStart = ui->FreqStart->value();
+    double freqEnd = ui->FreqEnd->value();
+    int freqsNumber = ui->FreqsNumber->value();
+
+    double angleInc = ui->Angle->value();
+
+    double freqStep = (freqEnd-freqStart)/freqsNumber;
+
+    for (double freq = freqStart; freq <= freqEnd; freq += freqStep) {
+        tmm * calculation = new tmm(freq,angleInc, structure);
+    }
+
+
 }
 
 

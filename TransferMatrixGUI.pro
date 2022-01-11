@@ -11,11 +11,13 @@ CONFIG += c++11
 SOURCES += \
     calculation.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    tmm.cpp
 
 HEADERS += \
     calculation.h \
-    mainwindow.h
+    mainwindow.h \
+    tmm.h
 
 FORMS += \
     calculation.ui \
